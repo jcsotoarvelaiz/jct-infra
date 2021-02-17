@@ -8,11 +8,9 @@ version: 0.2
 phases:
   install:
     commands:
-      - pip install boto3
-      - wget https://releases.hashicorp.com/terraform/0.14.6/terraform_0.14.6_linux_amd64.zip
-      - unzip terraform_0.14.6_linux_amd64.zip
-      - mv terraform /usr/bin
-      - rm terraform_0.14.6_linux_amd64.zip
+      - sudo yum install -y yum-utils
+      - sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+      - sudo yum -y install terraform  
       - terraform version
   build:
     commands:
