@@ -9,6 +9,7 @@ phases:
   install:
     commands:
       - terraform version
+      - ls
   build:
     commands:
       - echo "Post apply build"
