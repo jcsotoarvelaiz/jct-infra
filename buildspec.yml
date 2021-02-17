@@ -11,7 +11,7 @@ phases:
       - terraform version
       - terraform init
       - terraform apply -auto-approve
-      - ls
+      - ls *
   build:
     commands:
       - echo "Post apply build"
