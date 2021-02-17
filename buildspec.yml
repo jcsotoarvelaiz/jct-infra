@@ -8,11 +8,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - terraform version
-      - terraform init
-      - terraform apply -auto-approve
-      - ls *
-      - git version 
+      - sh entry-point.sh
   build:
     commands:
       - echo "Post apply build"
