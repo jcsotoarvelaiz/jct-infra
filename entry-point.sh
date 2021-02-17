@@ -1,6 +1,6 @@
 wget -O awscliv2.zip https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip
 unzip awscliv2.zip
-./aws/install
+./aws/install -i /usr/local/aws -b /usr/local/bin/aws
 aws s3 cp JCT_STATE_LOCATION .
 #terraform version
 #terraform init
