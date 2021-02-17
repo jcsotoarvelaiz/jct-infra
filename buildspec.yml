@@ -13,9 +13,6 @@ phases:
       - unzip terraform_0.14.6_linux_amd64.zip
       - mv terraform /bin
       - rm terraform_0.14.6_linux_amd64.zip
-      - apt-get update
-      - apt-cache search source
-      - apt-get install -y curl jq
       - terraform version
   build:
     commands:
