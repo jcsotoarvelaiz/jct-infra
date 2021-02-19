@@ -6,9 +6,9 @@ else
   aws s3 cp s3://$JCT_STATE_BUCKET/$JCT_STATE_KEY .
 fi
 
-#terraform version
-#terraform init
-#terraform apply -auto-approve
+terraform version
+terraform init
+terraform apply -auto-approve
 
 env
 aws s3 cp terraform.tfstate s3://$JCT_STATE_BUCKET/$JCT_STATE_KEY
