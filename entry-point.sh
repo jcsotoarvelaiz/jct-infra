@@ -3,7 +3,7 @@ if [ $not_exist ]; then
   echo "it does not exist"
 else
   echo "it exists"
-  aws s3 cp $JCT_STATE_BUCKET/$JCT_STATE_KEY .
+  aws s3 cp s3://$JCT_STATE_BUCKET/$JCT_STATE_KEY .
 fi
 
 #terraform version
@@ -11,4 +11,4 @@ fi
 #terraform apply -auto-approve
 
 env
-aws s3 cp terraform.tfstate $JCT_STATE_BUCKET/$JCT_STATE_KEY
+aws s3 cp terraform.tfstate s3://$JCT_STATE_BUCKET/$JCT_STATE_KEY
