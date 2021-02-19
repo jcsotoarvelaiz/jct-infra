@@ -8,6 +8,6 @@ provider "aws" {
 
 resource "aws_instance" "foobar" {
 	ami = "ami-047a51fa27710816e"
-	instance_type = "t1.micro"
+	instance_type = "t2.micro"
 }
 
